@@ -23,7 +23,7 @@ Features of E-connect:
 E-connect has following sections:
 
 1. E-connect Twitter:
-This allows user to tweet, retweet, send direct message. It also allows shows desktop notifications. In addition to that there's a feature of uploading images.
+This allows user to tweet, retweet, send direct message. It also allows shows desktop notifications.
 
 2. Schedule your mail:
 It enables us to schedule the emails to be automatically sent in future. 
