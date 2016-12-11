@@ -7,7 +7,7 @@ var links = document.getElementsByClassName("1");
 var baseUrl = "https://outlook.com/default.aspx?rru=compose";
 var url = '';
 var subject = tabTitle;
-var outlookUrl = baseUrl +"&subject=" + encodeURIComponent(subject) +"&body=" + body;
+var outlookUrl = baseUrl +"&subject=" + encodeURIComponent(subject) +"&body=" + encodeURIComponent(body);
     for (var i = 0; i < links.length; i++) {
         (function () {
             var ln = links[i];
