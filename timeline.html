@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Twitter Timeline</title>
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/timeline.css" type="text/css" />
+<script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="js/handlebars.runtime-1.0.rc.1.js" type="text/javascript"></script>
+<script src="js/templates.js" type="text/javascript"></script>
+<script src="js/timeline.js" type="text/javascript"></script>
+<script src="js/analytics.js" type="text/javascript"></script>
+</head>
+<body>
+<input type="text" style="position:absolute; width: 0px; height: 0px; top: -100px;" />
+<div id="compose-bar">
+	<div id="compose-text" class="placeholder" data-placeholder="Start typing your tweet..." contenteditable>Start typing your tweet...</div>
+	<button class="send-button" id="send-button">Send</button>
+	<div id="compose-count" class="counter">140</div>
+	<div id="compose-hidden">
+		<div id="compose-actions">
+			<input id="compose-file" accept="image/*" type="file" />
+			<a href="javascript:void(0)" id="compose-action-media">I</a>
+		</div>
+		<a href="javascript:void(0)" id="compose-actions-popout">Open your timeline in a new window to attach media</a>
+	</div>
+	<div id="progress-view">
+		<div class="progress-bar-container">
+			<div id="progress-bar"></div>
+		</div>
+	</div>
+</div>
+<ul id="tabs">
+	<li><a href="javascript:void(0)" data-view="home" class="active-tab">d</a></li>
+	<li><a href="javascript:void(0)" data-view="mentions" class="tab-at">@</a></li>
+	<li><a href="javascript:void(0)" data-view="messages">@</a></li>
+	<li><a href="javascript:void(0)" data-view="userTimeline">U</a></li>
+</ul>
+<div class="scroll-container">
+	<div id="timeline">
+		<div id="new-tweets-banner-outer">
+			<div id="new-tweets-banner">0 new tweets</div>
+		</div>
+	</div>
+</div>
+<div id="bottom-bar">
+	<a href="javascript:void(0)" id="popout-button">D</a>
+	<a href="options/index.html" target="_blank" id="settings-button">S</a>
+	<div id="account-select">
+		<select id="account-select-input"></select>
+		<img id="account-select-image" width="20" height="20" />
+	</div>
+</div>
+</body>
+</html>

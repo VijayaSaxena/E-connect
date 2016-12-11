@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-connect Twitter</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/chrome_shared.css" />
+<link rel="stylesheet" href="css/browser.css" />
+<link rel="stylesheet" href="css/checkbox.css" />
+<link rel="stylesheet" href="css/button.css" />
+<link rel="stylesheet" href="css/select.css" />
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/store+json2.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+<div id="navbar-container">
+	<div id="navbar-content-title">Options</div>
+	<ul id="navbar">
+		<li id="accounts" class="navbar-item navbar-item-selected">Accounts</li>
+		<li id="notifications" class="navbar-item">Notifications</li>
+		<li id="timeline" class="navbar-item">Timeline</li>
+	</ul>
+</div>
+<div id="mainview">
+	<div id="mainview-content">
+		<div id="page-container">
+			<div id="accountsPage" class="page" style="display:block">
+				<h1>Accounts</h1>
+				<div class="displaytable">
+					<section>
+						<h3 style="vertical-align:top">Active Accounts</h3>
+						<div id="accountList"></div>
+					</section>
+					<section>
+						<h3>Add Account</h3>
+						<div>
+							<button id="connect">Connect to Twitter</button>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div id="notificationsPage" class="page">
+				<h1>Notifications</h1>
+				<div class="displaytable">
+					<section>
+						<h3>Sticky notifications</h3>
+						<div>
+							<div class="checkbox">
+								<label>
+									<input id="stickyDm" type="checkbox">
+									<span>Direct Messages</span>
+								</label>
+							</div>
+							<div class="checkbox section-group">
+								<label>
+									<input id="stickyMention" type="checkbox">
+									<span>Mentions</span>
+								</label>
+							</div>
+							<div class="section-group informational-text">Sticky notifications stay on screen until closed manually</div>
+						</div>
+					</section>
+					<section id="displaySection">
+						<h3>Display</h3>
+						<div>
+							<div class="section-group">
+					            <span>Timeout:</span>
+					            <select id="timeout">
+					            	<option value="1">1 second</option>
+					            	<option value="2">2 seconds</option>
+					            	<option value="5">5 seconds</option>
+					            	<option value="10">10 seconds</option>
+					            	<option value="15">15 seconds</option>
+					            	<option value="20">20 seconds</option>
+					            	<option value="30">30 seconds</option>
+					            	<option value="0">Never</option>
+					            </select>
+					        </div>
+					        <div class="section-group">
+					            <span>Font size:</span>
+					            <select id="fontSize">
+					            	<option value="10">10px</option>
+					            	<option value="11">11px</option>
+					            	<option value="12">12px</option>
+					            	<option value="13">13px (default)</option>
+					            	<option value="16">16px</option>
+					            	<option value="18">18px</option>
+					            	<option value="20">20px</option>
+					            	<option value="24">24px</option>
+					            </select>
+				        	</div>
+						</div>
+					</section>
+					<section>
+						<h3>Errors</h3>
+						<div>
+							<div class="checkbox">
+								<label>
+									<input id="connectionError" type="checkbox">
+									<span>Show notifications for connection errors</span>
+								</label>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3>Position</h3>
+						<div>
+							<span class="informational-text">To change the position of notifications on screen, click the wrench icon in the corner of a notifcation window</span>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div id="timelinePage" class="page">
+				<h1>Timeline</h1>
+				<div class="displaytable">
+					<section>
+						<h3>Disable auto scroll</h3>
+						<div>
+							<div class="checkbox">
+								<label>
+									<input id="noScroll" type="checkbox">
+									<span>Don't scroll to the top automatically when new tweets arrive</span>
+								</label>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="settings-list account" id="accountTemplate" style="display:none">
+	<div>
+		<div class="avatar">
+			<img width="128" height="128" />
+			<h3></h3>
+		</div>
+		<div class="spacer" style="height: 0px;"></div>
+		<div><h1></h1></div>
+		<button class="default">Make default</button>
+		<div style="padding-top:10px">
+			<b>Notify for:</b>
+			<div class="checkbox">
+				<label>
+					<input class="notifyTweet" type="checkbox">
+					<span>Tweets</span>
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input class="notifyMention" type="checkbox">
+					<span>Mentions</span>
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input class="notifyDm" type="checkbox">
+					<span>Messages</span>
+				</label>
+			</div>
+			<div class="actions">
+				<button class="disable">Disable</button>
+				<button class="logout">Logout</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

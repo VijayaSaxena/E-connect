@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "images2/e.png",
+      "default_popup": "popup.html",
+       
+      "default_title": "E-connect"
+   },
+"content_scripts": [ {
+      "js": [ "./src/jquery-2.1.4.min.js", "./build/bundle.js" ],
+      "matches": [ "https://mail.google.com/*" ],
+      "run_at": "document_idle"
+   } ],
+
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "E-connect enables user to seamlessly use Email, Twitter, Facebook, LinkedIn, Blogs and Google+. It makes use of Artificial Intelligence for doing sentimental analysis of emails that we write.",
+   "icons": {
+      "128": "images2/e.png",
+      "16": "images2/e.png",
+      "48": "images2/e.png"
+   },
+   "manifest_version": 2,
+   "name": "E-connect",
+ "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkV0tJEYsk0UBzlumiMAU9mkSlLIMSmV+VUOwom6+m1SscZ0penDMKmVR4MR1mSm++eiAOjdCoHJ6XHE0oMkZIGWxAAmlVEVZ7r6wHvWNKmsFpI+kGVjxOWpd+nFOCsAfEwcMEL1/CdFfe5Ge/fhbpXgPsWYi5eGckcUpTL0r1GSBHUHlyVOyco/J1ID8FEhdnCg73xImTOFhRa1N6DJ3gu2x5+43MnFuIyBfcUnAWCfh7TL1/WyQkzMLRzldkU0ptDqIDvbPe+yDU8nNL+gjg0Ra0u3N1ErkROXQD9VrHlpsIZNyOCZFML9kM3v2Egc1NbJL+Jrm2/6hYEoDgC5RUQIDAQAB",
+   "options_page": "options/index.html",
+   "permissions": [ "activeTab",  "https://ajax.googleapis.com/", "tabs", "notifications", "http://*.twitter.com/", "https://*.twitter.com/","https://*.facebook.com/"],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ "background.html" ]
+}
